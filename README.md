@@ -1,20 +1,18 @@
 # FbPlugins
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fb_plugins`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+這是一個簡單外掛，讓你能夠在網頁上使用fb的"按讚"與"回應"功能
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'fb_plugins'
+gem 'fb_plugins' github: "andywang1116/fb_plugins"
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -22,7 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+可使用fb_like與fb_comments兩個helper
+
+範例如下:
+views/products/show.html.erb
+
+
+  </div>
+    <%= fb_like(product_url(@product)) %>
+  </div>
+  <div>
+    <%= fb_comments(product_url(@product), height: 500, width: 600) %>
+  </div>
+
+
+
 
 ## Development
 
@@ -39,3 +51,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+# fb_plugins
